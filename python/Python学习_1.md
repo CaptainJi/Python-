@@ -15,19 +15,19 @@
 
 
 是一种面向对象、解释型计算机程序设计语言，由“龟叔”（Guido van Rossum）于1989年圣诞节为打发无聊时间，而开发的一个新的脚本解释程序，至于为什么选中Python作为语言名字，是因为他是一叫Monty Python的喜剧团体的爱好者，第一个公开发行版发行于1991年。<br>
-### 设计哲学
+## 设计哲学
 •	优雅<br>
 •	明确<br>
 •	简单<br>
 
 
-### Python 为什么流行
+## Python 为什么流行
 •	代码量小<br>
 •	维护成本低<br>
 •	编程效率高<br>
 
 编程语言排名：https://www.tiobe.com/tiobe-index/ <br>
-### Python 可以用来做什么好玩的事情？
+## Python 可以用来做什么好玩的事情？
 Python 最常用的应该就是写爬虫了吧，比较简单的应用就是爬取web网站的资源（图片，文字、链接等）
 有些资深股民都是用 Python 抓取财经网站数据、并进行处理，然后输出可视化图表来帮助做决策。
 人工智能机器学习方面应用，python有很多库很方便做人工智能，比如numpy, scipy做数值计算的，sklearn做机器学习的，pybrain做神经网络的。<br>
@@ -55,7 +55,7 @@ Python3针对Python2做了许多优化，特别是尤其是处理字符等。<br
 •	菜单栏查看目录<br>
 •	磁盘路径查看<br>
 •	调试运行-IDLE<br>
-**Pip安装Selenium**<br>
+**pip安装Selenium**<br>
 pip 是一个现代的，通用的 Python 包管理工具。提供了对 Python 包的查找、下载、安装、卸载的功能。<br>
 **安装指定版本的Selenium**<br>
 pip install selenium==2.48.0<br>
@@ -272,8 +272,10 @@ sum=0
 for i in range(11):
     sum=sum+i
 print(sum)
-While循环
+```
+#### While循环
 while循环，只要条件满足，就不断循环，条件不满足时退出循环。
+```python
 n=10
 while n>0:
     n=n-1

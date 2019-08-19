@@ -2,7 +2,7 @@ Webdriver元素定位方法
 ==
 ---
 ## Webdriver概述
----
+
 Webdriver (Selenium2）是一种用于Web应用程序的自动测试工具它提供了一套友好的API，与Selenium 1（Selenium-RC）相比，Webdriver 的API更容易理解和使用，其可读性和可维护性也大大提高。Webdriver完全就是一套类库，不依赖于任何测试框架，除了必要的浏览器驱动，不需要启动其他进程或安装其他程序，也不必像Selenium 1那样需要先启动服务。<br>
 ### 支持浏览器
 •	Firefox （FirefoxDriver）<br>
@@ -41,15 +41,16 @@ selenium2.x/3.x +Chrome驱动<br>
 各个驱动下载地址： [http://www.seleniumhq.org/download/](http://www.seleniumhq.org/download/)<br>
 浏览器位数的版本和驱动版本要一致！<br> 如果是32bit浏览器而Driver是64bit则会导致脚本运行失败！<br>
 
----
+
 
 ## 第一个自动化测试脚本
----
+
 ##### 案例：<br>
 •	启动Chrome浏览器，<br>
 •	首先打开我要自学网页面，打印网页标题，等待3秒<br>
 •	打开百度首页，打印网页标题，再等待2秒<br>
 •	关闭浏览器。<br>
+
 
 ```Python
 from selenium import webdriver
@@ -77,7 +78,7 @@ driver.quit()
 
 
 
-### 浏览器操作
+## 浏览器操作
 ##### 案例：
 •	浏览器窗口大小设置<br>
 •	页面前进后退<br>
@@ -107,7 +108,7 @@ sleep(2)
 driver.quit()
 ```
 
-### 元素定位
+## 元素定位
 元素的定位应该是自动化测试的核心，要想操作一个元素，首先应该识别这个元素。<br>
 webdriver提供了一系列的元素定位方法，常用的有以下几种<br>
 •	id<br>
@@ -120,7 +121,7 @@ webdriver提供了一系列的元素定位方法，常用的有以下几种<br>
 •	css selector<br>
 ##### 案例：<br>
 打开百度首页，在搜索框自动输入“Selenium我要自学网”关键词，然后点击搜索按钮，查看搜索页面。<br>
-#### id与name 定位
+### id与name 定位
 ```Python
 from  selenium import webdriver
 from time import sleep
@@ -138,7 +139,7 @@ driver.find_element_by_id("su").click()
 
 
 
-#### tag_name定位
+### tag_name定位
 案例：打开我要自学网页面，在用户名输入框输入用户名“selenium”<br>
 
 ```Python
@@ -161,7 +162,7 @@ driver.quit()
 ```
 
 
-#### class_name定位
+### class_name定位
 根据标签中属性class来进行定位的一种方法<br>
 
 ```python
@@ -180,8 +181,8 @@ sleep(3)
 
 driver.quit()
 ```
-#### link_text定位
-	link_text定位就是根据超链接文字进行定位。<br>
+### link_text定位
+link_text定位就是根据超链接文字进行定位。<br>
 
 ```python
 from selenium import webdriver
@@ -195,7 +196,7 @@ driver.find_element_by_link_text('程序开发').click()
 sleep(3)
 driver.find_element_by_partial_link_text('神秘面纱').click()
 ```
-#### XPath定位
+### XPath定位
 XPath即为XML路径语言，它是一种用来确定XML文档中某部分位置的语言。XPath基于XML的树状结构，提供在数据结构树中找寻节点的能力。<br>
 ##### xpath绝对与相对定位<br>
 ```python
@@ -223,7 +224,7 @@ driver.find_element_by_id('su').click()
 sleep(3)
 driver.quit()
 ```
-#### Xpath层级与逻辑定位
+### Xpath层级与逻辑定位
 ```Python
 from selenium import webdriver
 from time import sleep
@@ -242,7 +243,7 @@ sleep(3)
 driver.quit()
 ```
 
-#### Css定位
+### Css定位
 Selenium极力推荐使用CSS 定位，而不是XPath来定位元素，原因是CSS 定位比XPath 定速度快，语法也更加简洁。 <br>
 ##### CSS常用定位方法
 1.	find_element_by_css_selector（）<br>
@@ -278,7 +279,7 @@ driver.find_element_by_css_selector("form#loginForm>ul>input").send_keys("51zxw"
 sleep(2)
 driver.quit()
 ```
-#### 下拉菜单元素定位
+### 下拉菜单元素定位
 ##### 案例：
 在我要自学网登录页面选择指定的保留时间。<br>
 ###### 1.根据选项元素标签定位

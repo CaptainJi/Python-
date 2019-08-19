@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/WebDriver.iml" filepath="$PROJECT_DIR$/.idea/WebDriver.iml" />
+      <module fileurl="file://E://Python/../../python/WebDriver/.idea/WebDriver.iml" filepath="E://Python/../../python/WebDriver/.idea/WebDriver.iml" />
     </modules>
   </component>
 </project>

@@ -1,10 +1,14 @@
-def Max_num(a,b):
-    if a>b:
-        return a
-    elif b>a:
-        return b
-    else :
-        return a
+class Student():
+    def __init__(self,name,city):
+        self.name=name
+        self.city=city
+        print("My name is %s and come from %s" % (name, city))
 
-result=Max_num(a=input("请输入第一个数字"),b=input('请输入第二个数字'))
-print(result)
+    def talk(self):
+        print('Hello,world!')
+
+# 生成实例对象
+stu1=Student('Jack','Beijing')
+stu1.talk()
+stu2=Student('Harry','Shanghai')
+stu2.talk()
