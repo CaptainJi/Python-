@@ -1,10 +1,7 @@
-
-[toc]
-
 ## Python 函数
 ### 函数概念
 函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。 函数能提高应用的模块性，和代码的重复利用率。如print() range()函数，但你也可以自己创建函数，这被叫做用户自定义函数。<br>
-#### 函数定义
+### 函数定义
 ##### 案例：
 定义一个函数Max_num()，用来比较两个数字的大小，然后将数值大的数字返回。<br>
 •	函数代码块以 def 关键词开头，后接函数标识符名称和圆括号()。<br>
@@ -23,10 +20,9 @@ def Max_num (a,b):
 result=Max_num(15,10)
 print(result)
 ```
----
 ## Python 面向对象
----
-#### 场景案例：
+
+##### 案例：
 在自学网班级要求两名新同学Jack和Harry分别介绍自己的名字和来自哪座城市，然后分别说一句班级口号：“Hello,51zxw” 最终控制台打印效果如下：<br>
 
 
@@ -48,7 +44,7 @@ city='Shanghai'
 print("My name is %s and come from %s" %(name,city))
 print("Hello 51zxw!")
 ```
-？思考几个问题？<br>
+思考几个问题？<br>
 1，	如果老师要求全班50个同学依次以上面形式自我介绍，该怎么办？<br>
 2，	每个同学介绍自己姓名和来自城市之后，再顺便介绍自己的年龄？<br>
 3，	每个同学自我介绍的代码块有何相同特征？<br>
@@ -82,10 +78,12 @@ Python是一门面向对象的语言，在Python中创建一个类和对象是�
 •	多态<br>
 ### Python 类与对象
 #### 定义类
-class Student(object):<br>
-##### 类体<br>
+```python
+class Student(object):
+```
+#### 类体<br>
 Class是类的定义的关键词，class后面紧接着是类名，即Student，类名通常是大写开头的单词，紧接着是(object)，表示该类是从哪个类继承下来的。通常如果没有明确的继承类，就使用object类，括号内一般为空默认就是继承Obejct类。这是所有类最终都会继承的类，也就是基类。<br>
-##### 属性初始化<br>
+#### 属性初始化<br>
 由于类可以起到模板的作用，因此，可以在创建实例对象的时候，把一些我们认为必须绑定的属性强制填写进去。通过定义一个特殊的\__init__方法，如：在创建Student实例的时候，就把name，city等属性绑上去：<br>
 ```python
 class Student():
@@ -97,32 +95,30 @@ class Student():
 
 
 \__init__方法的第一个参数永远是self，表示创建的实例本身，因此，在\__init__方法内部，就可以把各种属性绑定到self，因为self就指向创建的实例本身。有了\__init__方法，在创建实例的时候，就不能传入空的参数了，必须传入与\__init__方法匹配的参数，但self不需要传，Python解释器自己会把实例变量传进去。<br>
-##### 定义方法
+#### 定义方法
 类的方法除了第一个参数是self外，其他和普通函数一样。要调用一个方法，只需要在实例变量上直接调用，<br>
 ```python
 class Student():
     def __init__(self,name,city):
         self.name=name
         self.city=city
-    print("My name is %s and come from %s" % (name, city))
+        print("My name is %s and come from %s" % (name, city))
 
 def talk(self):
         print("Hello,51zxw")
-```
-##### 生成实例对象
 
-```python
+# 生成实例对象
 stu1=Student('Jack','Beijing')
 stu1.talk()
 stu2=Student('Harry','Shanghai')
 stu2.talk()
 ```
 ## 模 块
-为何要使用模块？<br>
+**为何要使用模块？<br>**
 随着项目功能和需求增多，代码量也会增大，把全部代码放在一个文件会显得冗余，因此需要使用模块进行分区管理。<br>
-Python模块是什么？<br>
+**Python模块是什么？<br>**
 Python 模块(Module)，是一个 Python 文件，以 .py 结尾，包含了 Python 对象定义和Python语句。<br>
-使用模块有什么好处？<br>
+**使用模块有什么好处？<br>**
 最大的好处是大大提高了代码的可维护性。其次，编写代码不必从零开始。当一个模块编写完毕，就可以被其他地方引用。如：随机数模块，时间模块。<br>
 ### import语句
 导入时间模块显示当前系统时间
@@ -135,10 +131,11 @@ print(time.ctime())	#调用获取当前时间的方法
 import random
 num=random.randint()
 print(num)
-from ...import ....
+```
+**from ...import ....<br>**
 Python 的 from 语句让你从模块中导入一个指定的部分到当前命名空间中。
+```python
 from  time import sleep
-
 from Student import Student
 
 stu1=Student('jack','Beijing')
@@ -148,7 +145,7 @@ stu2=Student('Harry','Shanghai')
 stu2.talk()
 ```
 
-#### 跨目录调用模块<br>
+### 跨目录调用模块<br>
 ##### 案例：<br>
 调用School目录下的Student模块<br>
 ```python
@@ -167,21 +164,27 @@ stu2.talk()
 •	3、如果都找不到，Python会察看安装默认路径。<br>
 
 ## Python异常
-什么是异常？<br>
+### 什么是异常？
 异常即是一个事件，该事件会在程序执行过程中发生，影响了程序的正常执行。 一般情况下，在Python无法正常处理程序时就会发生一个异常。 异常是Python对象，表示一个错误。 当Python脚本发生异常时我们需要捕获处理它，否则程序会终止执行。<br>
 ### 常见异常类型
-```
-    异常名称	           描述
 
-FileNotFoundError	  找不到指定文件的异常
-NameError	          未声明/初始化对象 (没有属性)
-BaseException	      所有异常的基类
-```
+异常名称  |  描述
+--|--
+FileNotFoundError  |  找不到指定文件的异常
+NameError|  未声明/初始化对象 (没有属性)
+BaseException	  |  所有异常的基类
+
+
+
+
+
+
+
 ### 异常处理语句
 •	try...except...<br>
 •	try...except...finally<br>
 •	raise<br>
-#### try....except<br>
+#### try....except
 
 
 ##### FileNotFoundError
@@ -250,59 +253,60 @@ try:
 except BaseException as msg:
     print(msg)
 ```
-注意：raise只能用于Python标准异常类！
-```python
-    异常名称	                     描述
+注意：raise只能用于Python标准异常类！<br>
 
-BaseException	              所有异常的基类
-SystemExit                     解释器请求退出
-KeyboardInterrupt	          用户中断执行(通常是输入^C)
-Exception	                  常规错误的基类
-StopIteration	              迭代器没有更多的值
-GeneratorExit	              生成器(generator)发生异常来通知退出
-StandardError	              所有的内建标准异常的基类
-ArithmeticError	            所有数值计算错误的基类
-FloatingPointError	         浮点计算错误
-OverflowError	              数值运算超出最大限制
-ZeroDivisionError	          除(或取模)零 (所有数据类型)
-AssertionError	             断言语句失败
-AttributeError	             对象没有这个属性
-EOFError	                   没有内建输入,到达EOF 标记
-EnvironmentError	           操作系统错误的基类
-IOError	                    输入/输出操作失败
-OSError	                    操作系统错误
-WindowsError	               系统调用失败
-ImportError	                导入模块/对象失败
-LookupError	                无效数据查询的基类
-IndexError	                 序列中没有此索引(index)
-KeyError	                   映射中没有这个键
-MemoryError	                内存溢出错误(对于Python 解释器不是致命的)
-NameError	                  未声明/初始化对象 (没有属性)
-UnboundLocalError	          访问未初始化的本地变量
-ReferenceError	             弱引用(Weak reference)试图访问已经垃圾回收了的对象
-RuntimeError	               一般的运行时错误
-NotImplementedError	        尚未实现的方法
-SyntaxError	Python          语法错误
-IndentationError	           缩进错误
-TabError	                   Tab和空格混用
-SystemError	                一般的解释器系统错误
-TypeError	                  对类型无效的操作
-ValueError	                 传入无效的参数
-UnicodeError	               Unicode 相关的错误
-UnicodeDecodeError	         Unicode 解码时的错误
-UnicodeEncodeError	         Unicode 编码时错误
-UnicodeTranslateError          Unicode 转换时错误
-Warning	                    警告的基类
-DeprecationWarning	         关于被弃用的特征的警告
-FutureWarning	              关于构造将来语义会有改变的警告
-OverflowWarning	            旧的关于自动提升为长整型(long)的警告
-PendingDeprecationWarning	  关于特性将会被废弃的警告
-RuntimeWarning	             可疑的运行时行为(runtime behavior)的警告
-SyntaxWarning	              可疑的语法的警告
-UserWarning	                用户代码生成的警告
-```
+
+异常名称	|    描述
+--|--
+BaseException	       |  所有异常的基类
+SystemExit           |          解释器请求退出
+KeyboardInterrupt	   |       用户中断执行(通常是输入^C)
+Exception	           |       常规错误的基类
+StopIteration	       |       迭代器没有更多的值
+GeneratorExit	       |       生成器(generator)发生异常来通知退出
+StandardError	       |       所有的内建标准异常的基类
+ArithmeticError	     |       所有数值计算错误的基类
+FloatingPointError	 |        浮点计算错误
+OverflowError	       |      数值运算超出最大限制
+ZeroDivisionError	   |       除(或取模)零 (所有数据类型)
+AssertionError	     |        断言语句失败
+AttributeError	     |        对象没有这个属性
+EOFError	           |        没有内建输入,到达EOF 标记
+EnvironmentError	   |        操作系统错误的基类
+IOError	             |       输入/输出操作失败
+OSError	             |        操作系统错误
+WindowsError	       |        系统调用失败
+ImportError	         |       导入模块/对象失败
+LookupError	         |       无效数据查询的基类
+IndexError	         |        序列中没有此索引(index)
+KeyError	           |        映射中没有这个键
+MemoryError	         |       内存溢出错误(对于Python 解释器不是致命的)
+NameError	           |       未声明/初始化对象 (没有属性)
+UnboundLocalError	   |       访问未初始化的本地变量
+ReferenceError	     |        弱引用(Weak reference)试图访问已经垃圾回收了的对象
+RuntimeError	       |        一般的运行时错误
+NotImplementedError	 |       尚未实现的方法
+SyntaxError	Python   |       语法错误
+IndentationError	   |        缩进错误
+TabError	           |        Tab和空格混用
+SystemError	         |       一般的解释器系统错误
+TypeError	           |       对类型无效的操作
+ValueError	         |        传入无效的参数
+UnicodeError	       |        Unicode 相关的错误
+UnicodeDecodeError	 |        Unicode 解码时的错误
+UnicodeEncodeError	 |        Unicode 编码时错误
+UnicodeTranslateError|          Unicode 转换时错误
+Warning	             |       警告的基类
+DeprecationWarning	 |        关于被弃用的特征的警告
+FutureWarning	       |       关于构造将来语义会有改变的警告
+OverflowWarning	     |       旧的关于自动提升为长整型(long)的警告
+PendingDeprecationWarning|	  关于特性将会被废弃的警告
+RuntimeWarning	     |        可疑的运行时行为(runtime behavior)的警告
+SyntaxWarning	       |       可疑的语法的警告
+UserWarning	         |       用户代码生成的警告
+
 ## 文件处理
-###打开文件
+### 打开文件
 使用Python内置的方法 open（）可以打开文件<br>
 ```python
 file object = open(file_name [, access_mode][, buffering])
@@ -314,7 +318,7 @@ file object = open(file_name [, access_mode][, buffering])
 f=open('stu_info.txt','r')
 f=open('E:\\test\\stu_info.txt','r')
 ```
-##### 常用文件打开模式
+### 常用文件打开模式
 ```
     模式	       描述
     r	      以只读方式打开文件。
@@ -348,7 +352,7 @@ for line in lines:
 split()方法语法：
 str.split(str="", num=string.count(str)).
 ```
-###### 参数
+##### 参数
 •	str -- 分隔符，默认为所有的空字符，包括空格、换行(\n)、制表符(\t)等。<br>
 •	num -- 分割次数<br>
 
@@ -363,6 +367,8 @@ csv_file=csv.reader(open('Stu_info.csv','r'))
 for stu in csv_file:
     print(stu)
 ```
+#### csv文件写入
+##### 案例：
 对Stu_info.csv文件追加写入两个学生信息<br>
 ```python
 stu=['Marry',28,'Changsha']
@@ -374,8 +380,8 @@ csv_write.writerow(stu)
 csv_write.writerow(stu1)
 print("Write File Over!")
 ```
-#### xml文件处理
-什么是xml文件？<br>
+### xml文件处理
+#### 什么是xml文件？
 xml即可扩展标记语言，它可以用来标记数据、定义数据类型，是一种允许用户对自己的标记语言进行定义的源语言。<br>
 从结构上，很像HTML超文本标记语言。但他们被设计的目的是不同的，具体如下：<br>
 •	XML 被设计用来传输和存储数据。<br>
@@ -389,24 +395,24 @@ xml即可扩展标记语言，它可以用来标记数据、定义数据类型�
     <body>Don't forget the meeting!</body>
 </note>
 ```
-###### xml特征：
+#### xml特征：
 •	它是有标签对组成，\<aa>\</aa><br>
 •	标签可以有属性：\<aa id='123'>\</aa><br>
 •	标签对可以嵌入数据：\<aa>abc\</aa><br>
 •	标签可以嵌入子标签（具有层级关系）<br>
-###### XMl文件结构
+#### XMl文件结构
 •	XML 文档形成了一种树结构，它从“根部”开始，然后扩展到“枝叶”。<br>
 •	第一行是 XML 声明。它定义 XML 的版本 (1.0) 和所使用的编码<br>
 •	<note>是根元素,也称为根节点。<br>
 •	<to><from><heading><body>是子元素（子节点）<br>
 •	XML 文档必须包含根元素。该元素是所有其他元素的父元素<br>
-###### DOM文档对象模型
+#### DOM文档对象模型
 文档对象模型（Document Object Model，简称DOM），DOM 就是针对 HTML 和 XML 提供的一个API。什么意思？就是说为了能以编程的方法操作这个 HTML 的内容（比如添加某些元素、修改元素的内容、删除某些元素），我们把这个 HTML或xml 看做一个对象树（DOM树），它本身和里面的所有东西比如 <div></div> 这些标签都看做一个对象，每个对象都叫做一个节点（node）。<br>
-###### DOM 有什么用？
+#### DOM 有什么用？
 就是为了操作 HTML或xml 中的元素，比如说我们要通过 JS 把这个网页的标题改了，直接这样就可以了：
 document.title = '51zxw';<br>
 
-##### 创建xml文件
+#### 创建xml文件
 创建一个xml文件Class_info.xml 用来存储班级学生（姓名，年龄，城市），老师（姓名，年龄，城市）、教务账号（学生和老师的账号，密码）等信息。<br>
 ```html
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -441,7 +447,7 @@ document.title = '51zxw';<br>
 	</account>
 </Class>
 ```
-##### xml节点
+#### xml节点
 xml文件节点一般包含3类：<br>
 1.	元素节点<br>
 2.	文本节点<br>
@@ -451,8 +457,8 @@ xml文件节点一般包含3类：<br>
 •	nodeValue（节点值）<br>
 •	nodeType（节点类型）<br>
 
-##### 读取元素节点
-###### 案例：
+#### 读取元素节点
+##### 案例：
 查看Class_info.xml文件里Class节点的属性（结点名称，节点的值、节点类型）
 ```python
 from xml.dom import minidom
@@ -473,8 +479,8 @@ print(root.nodeType)
 1.	如果节点是元素节点，则 nodeType 属性将返回 1。<br>
 2.	如果节点是属性节点，则 nodeType 属性将返回 2。<br>
 
-##### 读取文本节点的值
-###### 案例：
+#### 读取文本节点的值
+##### 案例：
 分别打印出Class_info.xml里的学生和老师的详细信息（姓名，年龄、城市）
 ```python
 from xml.dom import minidom
@@ -496,8 +502,8 @@ for i in range(4):
     print(ages[i].firstChild.data)
     print(citys[i].firstChild.data)
 ```
-##### 读取属性节点的值
-###### 案例：
+#### 读取属性节点的值
+##### 案例：
 分别读取打印老师和学生的账号密码。
 
 ```python
@@ -515,7 +521,7 @@ for i in range(2):
     password=logins[i].getAttribute('password')
     print(password)
 ```
-##### 读取子节点信息
+#### 读取子节点信息
 读取子节点<student>相关属性<br>
 •	nodeName（节点名称）<br>
 •	nodeValue（节点值）<br>
@@ -534,12 +540,12 @@ print(tags[0].tagName)
 print(tags[0].nodeType)
 print(tags[0].nodeValue)
 ```
-### 多线程与多进程
-#### 进程（Process）
+## 多线程与多进程
+### 进程（Process）
 是计算机中的程序关于某数据集合上的一次运行活动，是系统进行资源分配和调度的基本单位，是操作系统结构的基础。<br>
-#### 线程（Thread）
+### 线程（Thread）
 有时被称为轻量级进程(Lightweight Process，LWP），是程序执行流的最小单元。 线程是进程中的一个实体，是被系统独立调度和分派的基本单位，一个进程可以包含多个线程，但是线程不能包含多个进程。线程自己不拥有系统资源 ，在单个程序中同时运行多个线程完成不同的工作，称为多线程。<br>
-#### 线程与进程的区别
+### 线程与进程的区别
 线程和进程的区别在于，子进程和父进程有不同的代码和数据空间，而多个线程则共享数据空间，每个线程有自己的执行堆栈和程序计数器为其执行上下文。<br>
 [Tips]：
 LoadRunner和Jmeter性能测试工具也利用了多线程和多进程来构造多个并发用户来执行性能测试。<br>
