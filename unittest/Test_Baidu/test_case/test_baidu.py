@@ -12,7 +12,7 @@ class TestBaidu(unittest.TestCase):
         driver=self.driver
         driver.find_element_by_id('kw').clear()
         driver.find_element_by_id('kw').send_keys('Selenium')
-        driver.find_element_by_id('su').click()
+        driver.find_element_by_id('s').click()
         sleep(3)
 
         title=driver.title
