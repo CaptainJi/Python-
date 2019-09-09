@@ -1,10 +1,12 @@
 
 人生苦短，我用Python
 ==
+
 ---
 
 
-" Life is short, you need Python" ——Bruce Eckel "
+![](images/2019/09/人生苦短我用python.jpg) Life is short, you need Python" ——Bruce Eckel
+
 
 ---
 

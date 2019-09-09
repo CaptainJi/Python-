@@ -1,19 +1,10 @@
-from selenium import webdriver
-import os
+import unittest
+from BSTestRunner import BSTestRunner
+import time
 import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
-
-def insert_img(driver,filename):
-    func_path=os.path.dirname(__file__)
-    base_dir=os.path.dirname(func_path)
-    base_dir=str(base_dir)
-    base_dir=base_dir.replace('\\','/')
-
-    base=base_dir.split('/Website')[0]
-    print(base)
-    filepath=base+'/Website/test_report/screenshot/'+filename
-    driver.get_screenshot_as_file(filepath)
+import os
 
 def send_mail(latest_report):
     f=open(latest_report,'rb')
@@ -28,7 +19,7 @@ def send_mail(latest_report):
     sender = 'jiqing19861123@163.com'
     receives = ['jiqing@antong.cn', '215791291@qq.com']
 
-    subject = '自动化测试报告'
+    subject = 'Web Selenium 自动化测试报告'
     # content = '<html><h1 style="color:red">我要自学网，自学成才！</h1></html>'
 
     msg = MIMEText(mail_content, 'html', 'utf-8')
@@ -41,10 +32,10 @@ def send_mail(latest_report):
     smtp.ehlo(smtpserver)
     smtp.login(user, password)
 
-    print("开始发送邮件……")
+    print("Start send email...")
     smtp.sendmail(sender, receives, msg.as_string())
     smtp.quit()
-    print("邮件发送完成!")
+    print("Send email end!")
 
 def latest_report(report_dir):
     lists = os.listdir(report_dir)
@@ -52,14 +43,24 @@ def latest_report(report_dir):
 
     lists.sort(key=lambda fn: os.path.getatime(report_dir + '\\' + fn))
 
-    print("最后一个报告是 " + lists[-1])
+    print("the latest report is " + lists[-1])
 
     file = os.path.join(report_dir, lists[-1])
-    # print(file)
+    print(file)
     return file
 
 if __name__ == '__main__':
-    driver=webdriver.Chrome()
-    driver.get('http://www.baidu.com')
-    insert_img(driver,'baidu.png')
-    driver.quit()
+    report_dir='./test_report'
+    test_dir = './test_case'
+
+    discover = unittest.defaultTestLoader.discover(test_dir, pattern="test*.py")
+    now=time.strftime("%Y-%m-%d %H_%M_%S")
+    report_name=report_dir+'/'+now+'result.html'
+
+    with open(report_name,'wb') as f:
+        runner=BSTestRunner(stream=f,title="Test Report",description="baidu search")
+        runner.run(discover)
+    f.close()
+
+    latest_report=latest_report(report_dir)
+    send_mail(latest_report)
