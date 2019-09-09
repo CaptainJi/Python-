@@ -22,11 +22,11 @@ def send_mail(latest_report):
 
     smtpserver = 'smtp.163.com'
 
-    user = 'jiqing19861123@163.com'
-    password = 'jiqing19861224'
+    user = '@163.com'
+    password = ''
 
-    sender = 'jiqing19861123@163.com'
-    receives = ['jiqing@antong.cn', '215791291@qq.com']
+    sender = '@163.com'
+    receives = ['', '@qq.com']
 
     subject = '自动化测试报告'
     # content = '<html><h1 style="color:red">我要自学网，自学成才！</h1></html>'
