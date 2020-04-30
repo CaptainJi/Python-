@@ -48,10 +48,10 @@ def sendMail(latestReport, latestScreenshot):
         screenshot = file.read()
 
     smtpserver = 'smtp.exmail.qq.com'  # 定义邮箱服务器地址
-    user = 'jiqing@antong.cn'  # 定义用户名
-    password = 'omRSPv3EiCSii5kH'  # 定义客户端密码
-    sender = 'jiqing@antong.cn'  # 定义发送人
-    receivers = ['jiqing@antong.cn']  # 定义接收人多接收人用“,”分隔
+    user = ''  # 定义用户名
+    password = ''  # 定义客户端密码
+    sender = ''  # 定义发送人
+    receivers = ['']  # 定义接收人多接收人用“,”分隔
 
     # 定义邮件标题及内容
     subject = '风表监测报告'
