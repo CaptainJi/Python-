@@ -1,8 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b03cad97-f926-4e41-92d1-d8dfc9414eaf" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="b03cad97-f926-4e41-92d1-d8dfc9414eaf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/businessView/loginView.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Project/AnemometerMonitor/businessView/loginView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/common/myunit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/config/HTMLTestRunnerEN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/driver/driver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/model/baseView.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/model/function.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月27日15点30分13秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月27日15点34分20秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月27日15点41分27秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月27日15点43分44秒TestReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Project/AnemometerMonitor/businessView/parss_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月27日16点01分56秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月27日16点10分52秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月27日16点12分15秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月27日16点22分32秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月27日16点34分07秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月27日16点39分07秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月27日16点41分46秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月27日16点42分45秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月27日16点43分12秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月27日16点53分08秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月27日16点57分56秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月27日16点58分23秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月28日12点30分14秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月28日12点33分29秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月28日12点59分24秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/reports/2020年04月28日13点01分36秒TestReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project/AnemometerMonitor/venv/Lib/site-packages/easy-install.pth" beforeDir="false" afterPath="$PROJECT_DIR$/../Project/AnemometerMonitor/venv/Lib/site-packages/easy-install.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pythonSpider.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonSpider.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,12 +84,21 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1P7wP41vWiv0E88q5OaArgOzp1C" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebDriver" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Appium-AutoTest/project/Kyb-TestProject" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -67,18 +108,6 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.03.FilmComment">
     <configuration name="01.基本用法" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -201,16 +230,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand />
-          <select />
-        </treeState>
-      </serviceView>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -243,12 +262,14 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/pythonSpider$cursors.coverage" NAME="cursors Coverage Results" MODIFIED="1565254312448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/pymysql" />
-    <SUITE FILE_PATH="coverage/pythonSpider$01_BasicUsage.coverage" NAME="01.BasicUsage Coverage Results" MODIFIED="1565581175392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonSpider$DoubanFilmReview.coverage" NAME="DoubanFilmReview Coverage Results" MODIFIED="1565590609817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonSpider$03_FilmComment.coverage" NAME="03.FilmComment Coverage Results" MODIFIED="1565939648082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonSpider$01_.coverage" NAME="01.基本用法 Coverage Results" MODIFIED="1565571824531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/python_p/小白学编程：python通俗易懂的爬虫视频教程/代码/python-spider/python-spider" />
-    <SUITE FILE_PATH="coverage/pythonSpider$02_ProcessingJasonData.coverage" NAME="02.ProcessingJasonData Coverage Results" MODIFIED="1565923755282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  <component name="WindowStateProjectService">
+    <state x="552" y="160" key="#Plugins" timestamp="1588558491577">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="160" key="#Plugins/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588558491577" />
+    <state x="668" y="268" key="FileChooserDialogImpl" timestamp="1588559389108">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="668" y="268" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588559389108" />
   </component>
 </project>
